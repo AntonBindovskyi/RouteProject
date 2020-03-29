@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="RouteProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVF-co-yna" customClass="GLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-Xv-2sA">
+                                <rect key="frame" x="373" y="76" width="25" height="24"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GKi-WK-oIT">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MVF-co-yna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CJM-fe-c6l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ca1-Xv-2sA" secondAttribute="trailing" constant="16" id="Jr3-Se-xyQ"/>
+                            <constraint firstItem="GKi-WK-oIT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RTC-Jn-qFG"/>
+                            <constraint firstItem="MVF-co-yna" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ieD-WG-IbI"/>
+                            <constraint firstAttribute="bottom" secondItem="MVF-co-yna" secondAttribute="bottom" id="neR-P0-0gk"/>
+                            <constraint firstItem="ca1-Xv-2sA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pqk-td-reu"/>
+                            <constraint firstItem="MVF-co-yna" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="qZX-Hy-zA3"/>
+                            <constraint firstItem="GKi-WK-oIT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vB2-IZ-EpV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="GKi-WK-oIT" id="Ga2-hN-dxy"/>
+                        <outlet property="infoButton" destination="ca1-Xv-2sA" id="cIx-H1-d7J"/>
+                        <outlet property="mapView" destination="MVF-co-yna" id="bEV-1i-Xhp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
